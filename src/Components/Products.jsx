@@ -9,7 +9,7 @@ const Products = () => {
         // Fetch products from the API
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/products');
+                const response = await axios.get('https://product-backend-gnm9.onrender.com/products');
                 setProducts(response.data);  // Store the products in state
             } catch (error) {
                 setErrorMessage('Failed to load products');
