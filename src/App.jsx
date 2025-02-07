@@ -55,7 +55,7 @@ const App = () => {
         {/* If the user is not logged in, redirect to login */}
         <Route 
           path="/products" 
-          element={token ? <Products /> : <Navigate to="/login" />}
+          element={isAuthenticated ? <Products /> : <Navigate to="/login" />}
         />
       </Routes>
     </Router>
