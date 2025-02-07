@@ -34,7 +34,7 @@ const App = () => {
               )}
             </li>
             <li className='nav-item'>
-              <Link className='nav-link text-white ' to="/Products">Sign UP</Link>
+              <Link className='nav-link text-white ' to="/signup">Sign UP</Link>
             </li>
           </ul>
         </div>
