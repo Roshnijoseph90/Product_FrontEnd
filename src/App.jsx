@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-ro
 import Home from './Components/Home';
 import Products from './Components/Products';
 import Login from './Components/Login';
-
+import Signup from './Components/Signup';
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -33,6 +33,9 @@ const App = () => {
                 <button onClick={handleLogout} className='nav-link'>Logout</button>
               )}
             </li>
+            <li className='nav-item'>
+              <Link className='nav-link text-white ' to="/Products">Sign UP</Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -47,6 +50,12 @@ const App = () => {
               <Products />
             </ProtectedRoute>
           }
+          />
+          <Route path ='/signup' element ={<Signup/>} />
+        {/* If the user is not logged in, redirect to login */}
+        <Route 
+          path="/products" 
+          element={token ? <Products /> : <Navigate to="/login" />}
         />
       </Routes>
     </Router>

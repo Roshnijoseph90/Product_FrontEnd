@@ -28,10 +28,10 @@ const Login = ({ onLogin }) => {
       email,
       password,
     };
-
-    // API call
+    
     try {
-      const response = await axios.post("https://product-backend-gnm9.onrender.com/login", data);
+      const response = await axios.post(` https://product-backend-gnm9.onrender.com/login`, data);
+
       console.log(response.data);
       alert(response.data.message);
       onLogin();  // Trigger state update in App.js
