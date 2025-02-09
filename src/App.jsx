@@ -17,16 +17,20 @@ const App = () => {
 
   return (
     <Router>
-      <nav className='navbar navbar-expand-lg'  style={{ backgroundColor: 'green' }}>
+      <nav className='navbar  navbar-expand-lg'  >
         <div className='container-fluid'>
           <ul className='navbar-nav'>
             <li className='nav-item'>
               <Link className='nav-link text-white' to="/">Home</Link>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link text-white ' to="/Products">Products</Link>
+              <Link className='nav-link text-white ' to="/login">Products</Link>
             </li>
-            <li>
+
+            </ul>
+            <ul className='navbar-nav ms-auto'> 
+              
+              <li>
               {!isAuthenticated ? (
                 <Link className='nav-link text-white' to="/login">Login</Link>
               ) : (
@@ -34,7 +38,7 @@ const App = () => {
               )}
             </li>
             <li className='nav-item'>
-              <Link className='nav-link text-white ' to="/signup">Sign UP</Link>
+              <Link className='nav-link   text-white ' to="/signup">Sign UP</Link>
             </li>
           </ul>
         </div>

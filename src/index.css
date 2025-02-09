@@ -46,3 +46,61 @@
 div.product-card p.product-rating {
     color: gold !important;
 }
+
+  /* Ensure the body and navbar have full width and zero margin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: green;
+}
+
+.navbar .container-fluid {
+    display: flex;            /* Use Flexbox */
+    justify-content: space-between; /* Align navbar items at the ends */
+    align-items: center;      /* Center items vertically */
+    padding: 10px 20px;
+}
+
+.navbar-nav {
+    display: flex;            /* Use Flexbox for nav items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-right: 20px;       /* Space between links */
+}
+
+/* This makes sure the 'Sign Up' and 'Login' buttons align to the right */
+.navbar-nav .ms-auto {
+    margin-left: auto;        /* Push this section to the far right */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+.nav-link:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    border-radius: 4px;
+}
+
+/* Add some style to the 'Sign Up' button */
+.navbar-nav .signup-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar-nav .signup-button:hover {
+    background-color: #45a049;
+}
