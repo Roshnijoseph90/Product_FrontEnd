@@ -13,7 +13,9 @@ const App = () => {
 
   const handleLogout = () => {
     setIsAuthenticated(false);
+    navigate('/login');  // Redirect to login page after logout
   };
+  
 
   return (
     <Router>
